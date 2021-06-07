@@ -1,0 +1,400 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.title
+{
+    font-family: Poppins;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 30px;
+    font-weight: 600;
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+    cursor: default;
+    margin: 0;
+}
+
+.title.above
+{
+    top: 5%;
+    cursor: help;
+}
+
+.sublinks 
+{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sublinks li
+{
+    float: left;
+}
+
+.sublinks li a 
+{
+    font-family: Poppins;
+    font-weight: 60;
+    letter-spacing: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding-inline-start: 30px;
+    padding-top: 10px;
+    text-decoration: none;
+    cursor: help;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.sublinks li a:hover
+{
+    color: #212031;
+    text-decoration: underline;
+}
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: -1;
+}
+
+.loading-bar
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: top center;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.loading-bar.ended
+{
+    transform-origin: top center;
+    transition: transform 1.5s ease-in-out;
+}
+
+.projectsWrapper
+{
+    position: absolute;
+    font-family: "Source Code Pro", monospace;
+    color: #ffffff;
+    line-height: 20px;
+    transition: 2s;
+    opacity: 0;
+    visibility: hidden;
+    left: 50%;
+    transform: translateX(-150px);
+    top: 18%;
+}
+
+.projectsWrapper .projectsTitle
+{
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 60;
+    position: relative;
+    text-decoration: underline;
+}
+
+.projectsWrapper .projectsTitle.show::before,
+.projectsWrapper .projectsTitle.show::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.projectsWrapper .projectsTitle.show::before
+{
+    background: black;
+    animation: DOSTitle 2s steps(38) forwards;
+    animation-delay: 2s;
+}
+
+@keyframes DOSTitle 
+{
+    to 
+    { 
+        left: 100%; 
+    }
+}
+
+.projectsWrapper ul li a
+{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 60;
+    cursor: alias;
+}
+
+.projectsWrapper ul li a:hover
+{
+    color: #686868;
+}
+
+.projectsWrapper ul li a.show::before,
+.projectsWrapper ul li a.show::after
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.projectsWrapper ul li a.show::before
+{
+    background: black;
+    animation: DOSText 1s steps(38) forwards;
+    animation-delay: 2.7s;
+}
+
+@keyframes DOSText 
+{
+    to 
+    { 
+        left: 100%; 
+    }
+}
+
+.projectsWrapper.show
+{
+    visibility: visible;
+    transition: 0.05s;
+    transition-delay: 2s;
+    opacity: 1;
+}
+
+.aboutWrapper
+{
+    top: 11%;
+    font-family: Poppins;
+    position: absolute;
+    width: 100%;
+    transform-origin: top center;
+    transform: translate(-50%, 10px);
+    display: inline-block;
+    left: 50%;
+    color: #ffffff;
+    line-height: 20px;
+    transition: 2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.aboutWrapper.show
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.aboutWrapper h2
+{
+    position: relative;
+    font-size: 20px;
+    line-height: 10px;
+    font-weight: 50;
+    padding: 10px;
+    letter-spacing: 20px;
+}
+
+.aboutWrapper p 
+{
+    position: relative;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.aboutWrapper ul li
+{   
+    position: relative;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 20px;
+    left: 0%;
+    display: inline;
+    padding: 40px;  
+    line-height: 10px;
+}
+
+.aboutWrapper ul li a
+{
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.aboutWrapper ul li a:hover
+{
+    color: #212031;
+    text-decoration: underline;
+}
+
+.archiveWrapper
+{
+    top: 11%;
+    font-family: Poppins;
+    position: absolute;
+    transform: translate(-50%, 10px);
+    display: inline-block;
+    left: 50%;
+    color: #ffffff;
+    line-height: 20px;
+    transition: 2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.archiveWrapper h2
+{
+    position: relative;
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: 60;
+    line-height: 80px;
+    cursor: default;
+}
+
+.archiveWrapper ul li
+{
+  list-style: none;  
+}
+
+.archiveWrapper ul li a
+{
+    position: relative;
+    text-decoration: underline;
+    color: #ffffff;
+    transition: 0.2s;
+    line-height: 30px;
+    font-size: 20px;
+    cursor: alias;
+}
+
+.archiveWrapper .viewArchive
+{
+    top: 30px;
+    position: relative;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 30px;
+    letter-spacing: 5px;
+    font-size: 22px;
+    cursor: alias;
+}
+
+.archiveWrapper a:hover
+{
+    color: #686375;
+}
+
+.archiveWrapper.show
+{
+    visibility: visible;
+    transition: 2s;
+    opacity: 1;
+}
+
+/* MOBILE OPTIMIZATION */
+@media only screen and (min-height: 375)
+{
+    .sublinks
+    {
+        bottom: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    .aboutWrapper
+    {
+        width: 80%;
+        top: 24%;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .aboutWrapper h2
+    {
+        font-size: 30px;
+        transform: translate(10px, -30px);
+        line-height: 55px;
+        transform: translate(10px, -30px);
+    }
+    .aboutWrapper p 
+    {
+        font-size: 20px;
+    }
+    .aboutWrapper ul li
+    {
+        left: 45%;
+        line-height: 80px;
+    }
+    .sublinks {
+        bottom: 5%;
+    }
+}
+
+@media only screen and (min-width: 1024px)
+{
+    .aboutWrapper
+    {
+        width: 60%;
+        top: 25%;
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (min-width: 1080px)
+{
+    .aboutWrapper
+    {
+        width: 30%;
+        top: 25%;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+

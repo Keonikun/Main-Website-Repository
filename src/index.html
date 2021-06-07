@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Julien Darling-Funk</title>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <script src="https://kit.fontawesome.com/87f712bafc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Threejs Canvas -->
+    <div class="loading-bar"></div>
+    <div id="title" class="title">Julien Darling-Funk</div>
+    <div>
+        <ul class="sublinks">
+            <li><a id ="projects" class="projects" href="#">Projects</a></li>
+            <li><a id ="about" class="about" href="#">About</a></li>
+            <li><a id ="archive" class="archive" href="#">Archive</a></li>
+        </ul>
+    </div>
+    <div id="aboutWrapper" class="aboutWrapper">
+        <h2 class="aboutTitle">About</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat lacus. Mauris id feugiat dui. 
+            Vivamus ullamcorper nec massa eu dictum. Curabitur congue magna at dolor pharetra molestie. Sed eu molestie purus, 
+            vitae efficitur turpis. Vestibulum malesuada cursus eros at molestie. 
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat lacus. Mauris id feugiat dui. 
+            Vivamus ullamcorper nec massa eu dictum. Curabitur congue magna at dolor pharetra molestie. Sed eu molestie purus, 
+            vitae efficitur turpis. Vestibulum malesuada cursus eros at molestie. 
+        </p>
+        <ul>
+            <li><a href="https://www.instagram.com/julienkdf/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">CV</a></li>
+        </ul>
+    </div>
+    <div id="projectsWrapper" class="projectsWrapper">
+        <h2 id= "projectsTitle" class="projectsTitle">Projects</h2>
+        <ul>
+            <li><a id="DOSText0" href="#">Hecate's Thread (2021) →</a></li>
+            <li><a id="DOSText1" href="#">Squared Unit (2020) →</a></li>
+            <li><a id="DOSText2" href="#">Points of Intersection (2029) →</a></li>
+            <li><a id="DOSText3" href="#">Mediations Between Polarities (2019) →</a></li>
+            <li><a id="DOSText4" href="#">Sun/Snow:Entropy, Reform (2018) →</a></li>
+        </ul>
+    </div>
+    <div id="archiveWrapper" class="archiveWrapper">
+        <h2 class="archiveTitle">Recent Items...</h2>
+        <ul>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Photo Collection</a></li>
+            <li><a href="#">About This Website</a></li>
+            <li><a href="#">Past Artworks/Projects</a></li>
+            <li><a href="#">Points of Intersection</a></li>
+            <li><a href="#">Points of Intersection</a></li>
+        </ul>
+        <a class="viewArchive" href="html/archive.html">View All Items<br>In Archive...</a>
+    </div>
+    <script type="text/javascript">
+        const titleBaffle = baffle(".title")
+        titleBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 120
+        })
+        titleBaffle.start()
+        titleBaffle.reveal(1000, 500);  
+        const projectsBaffle = baffle(".projects")
+        projectsBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 120
+        })
+        projectsBaffle.start()
+        projectsBaffle.reveal(1000, 500);  
+        const aboutBaffle = baffle(".about")
+        aboutBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 120
+        })
+        aboutBaffle.start()
+        aboutBaffle.reveal(1000, 500);  
+        const archiveBaffle = baffle(".archive")
+        archiveBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 120
+        })
+        archiveBaffle.start()
+        archiveBaffle.reveal(1000, 500);  
+    </script>
+    <canvas class="webgl"></canvas>
+</body>
+
+</html>
